@@ -1,42 +1,56 @@
-package singleton;
+package designPatternBulider;
 
-public class Computer {
-	private int id;
-	private String name;
-	private PrinterCentralizer printerCenter =PrinterCentralizer.getInstance();
+public class Computer { 
+	private String serial;
+	private String memory;
+	private String processor;
 	
-	
-	
-	
-	
-	
-	public PrinterCentralizer getPrinterCenter() {
-		return printerCenter;
-	}
-	public void setPrinterCenter(PrinterCentralizer printerCenter) {
-		this.printerCenter = printerCenter;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public Computer(int id, String name) {
+	private boolean isLaptop;
+	private boolean isOnline;
+	 private String cardNumber;
+	public Computer(String serial, String memory, String processor) {
 		super();
-		this.id = id;
-		this.name = name;
+		this.serial = serial;
+		this.memory = memory;
+		this.processor = processor;
 	}
-	
-	
-	public void print( ) {
-		
-		System.out.println ("Computer "+this.name + " print on the printer " + printerCenter.getPrinter().print());
+	public String getSerial() {
+		return serial;
 	}
+	public void setSerial(String serial) {
+		this.serial = serial;
+	}
+	public String getMemory() {
+		return memory;
+	}
+	public void setMemory(String memory) {
+		this.memory = memory;
+	}
+	public String getProcessor() {
+		return processor;
+	}
+	public void setProcessor(String processor) {
+		this.processor = processor;
+	}
+	public boolean isLaptop() {
+		return isLaptop;
+	}
+	public void setLaptop(boolean isLaptop) {
+		this.isLaptop = isLaptop;
+	}
+	public boolean isOnline() {
+		return isOnline;
+	}
+	public void setOnline(boolean isOnline) {
+		this.isOnline = isOnline;
+	}
+	public String getCardNumber() {
+		return cardNumber;
+	}
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+	 
+	 
+
 }
